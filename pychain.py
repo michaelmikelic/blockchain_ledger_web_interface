@@ -161,7 +161,7 @@ if st.button("Add Block"):
     pychain.add_block(new_block)
     st.balloons()
 
-################################################################################
+#####################################################################
 # Streamlit Code (continues)
 
 st.markdown("## The PyChain Ledger")
@@ -172,7 +172,7 @@ st.write(pychain_df)
 difficulty = st.sidebar.slider("Block Difficulty", 1, 5, 2)
 pychain.difficulty = difficulty
 
-# visualization of the blocks
+# visualization of the blocks - 
 st.sidebar.write("# Block Inspector")
 selected_block = st.sidebar.selectbox(
     "Which block would you like to see?", pychain.chain
@@ -180,7 +180,7 @@ selected_block = st.sidebar.selectbox(
 
 st.sidebar.write(selected_block)
 
-# action - validate chain
+# action - validate chain - check
 if st.button("Validate Chain"):
 
     check = pychain.is_valid()
